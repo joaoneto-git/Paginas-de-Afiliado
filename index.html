@@ -3,95 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Cloner & Editor</title>
+    <title>HTML Page Creator</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
-        textarea { width: 100%; height: 150px; margin-bottom: 10px; }
+        textarea { width: 100%; height: 200px; margin-bottom: 10px; }
         input { width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; }
-        button { padding: 10px 15px; margin-right: 5px; cursor: pointer; }
-        #editor { width: 100%; height: 400px; border: 1px solid #ddd; padding: 10px; overflow-y: auto; margin-bottom: 20px; }
-        h3 { margin-top: 30px; }
+        button { padding: 10px 15px; cursor: pointer; }
     </style>
 </head>
 <body>
 
-<h1>Page Cloner & Editor</h1>
+<h1>HTML Page Creator</h1>
 
-<!-- Input URL to clone -->
-<h3>Enter the URL of the Site to Clone</h3>
-<input type="text" id="siteUrl" placeholder="Enter website URL (e.g. https://example.com)">
-<input type="text" id="newPageUrl" placeholder="Enter custom page URL (e.g. /mypage.html)">
-<button id="clonePage">Clone and Edit Page</button>
+<!-- Input for HTML code -->
+<h3>Enter your HTML code</h3>
+<textarea id="htmlCode" placeholder="Enter your HTML code here..."></textarea>
 
-<!-- HTML editor -->
-<h3>Edit the Cloned HTML</h3>
-<div id="editor" contenteditable="true"></div>
+<!-- Input for custom page URL -->
+<h3>Enter the custom page URL</h3>
+<input type="text" id="customUrl" placeholder="Enter the custom page URL (e.g. mypage.html)">
 
-<!-- Save and Preview options -->
-<button id="savePage">Save Page</button>
-<button id="previewPage">Preview Page</button>
+<!-- Button to create the page -->
+<button id="createPage">Create Page</button>
 
 <script>
-    let clonedHtml = "";
+    document.getElementById('createPage').addEventListener('click', function() {
+        const htmlCode = document.getElementById('htmlCode').value;
+        const customUrl = document.getElementById('customUrl').value;
 
-    // Function to fetch and clone a page using a proxy to bypass CORS issues
-    async function clonePage() {
-        const siteUrl = document.getElementById('siteUrl').value;
-        const newPageUrl = document.getElementById('newPageUrl').value;
-
-        if (!siteUrl || !newPageUrl) {
-            alert("Please enter both a site URL and a new page URL.");
+        if (!htmlCode || !customUrl) {
+            alert('Please enter both HTML code and a custom URL.');
             return;
         }
 
-        const proxyUrl = "https://cors-anywhere.herokuapp.com/"; // Proxy to bypass CORS
-        const fullUrl = proxyUrl + siteUrl;
-
-        try {
-            // Fetch the HTML content from the provided URL using the proxy
-            const response = await fetch(fullUrl);
-            if (!response.ok) {
-                throw new Error("Failed to fetch the page. Make sure the URL is correct.");
-            }
-
-            // Get the HTML content
-            const htmlContent = await response.text();
-            document.getElementById('editor').innerHTML = htmlContent; // Load HTML into the editor
-            clonedHtml = htmlContent; // Store the cloned HTML
-
-            alert(`Page cloned successfully! You can now edit the HTML.`);
-        } catch (error) {
-            console.error(error);
-            alert("Error: Unable to clone the page. " + error.message);
-        }
-    }
-
-    // Function to save the edited HTML
-    function savePage() {
-        const editedHtml = document.getElementById('editor').innerHTML;
-        const newPageUrl = document.getElementById('newPageUrl').value;
-
-        // Create a Blob with the edited HTML
-        const blob = new Blob([editedHtml], { type: 'text/html' });
+        // Create a Blob with the HTML code
+        const blob = new Blob([htmlCode], { type: 'text/html' });
         const downloadLink = document.createElement('a');
         downloadLink.href = URL.createObjectURL(blob);
-        downloadLink.download = newPageUrl.split('/').pop() || "page.html"; // Default to 'page.html' if no name
-        downloadLink.click();
+        downloadLink.download = customUrl; // Name the file with the custom URL
+        downloadLink.click(); // Trigger download
 
-        alert(`Page saved as ${newPageUrl}`);
-    }
-
-    // Function to preview the edited HTML in a new tab
-    function previewPage() {
-        const editedHtml = document.getElementById('editor').innerHTML;
-        const newWindow = window.open();
-        newWindow.document.write(editedHtml);
-    }
-
-    // Event listeners for buttons
-    document.getElementById('clonePage').addEventListener('click', clonePage);
-    document.getElementById('savePage').addEventListener('click', savePage);
-    document.getElementById('previewPage').addEventListener('click', previewPage);
+        alert(`Page created and downloaded as ${customUrl}`);
+    });
 </script>
 
 </body>
