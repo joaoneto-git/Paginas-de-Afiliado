@@ -3,109 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Page Editor</title>
+    <title>Page Cloner & Editor</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         textarea { width: 100%; height: 150px; margin-bottom: 10px; }
+        input { width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; }
         button { padding: 10px 15px; margin-right: 5px; cursor: pointer; }
-        #editor { width: 100%; height: 300px; border: 1px solid #ddd; padding: 10px; overflow-y: auto; margin-bottom: 20px; }
-        ul { list-style-type: none; padding: 0; }
-        ul li { margin: 5px 0; cursor: pointer; }
-        ul li:hover { text-decoration: underline; }
+        #editor { width: 100%; height: 400px; border: 1px solid #ddd; padding: 10px; overflow-y: auto; margin-bottom: 20px; }
         h3 { margin-top: 30px; }
     </style>
 </head>
 <body>
 
-<h1>Online Page Editor</h1>
+<h1>Page Cloner & Editor</h1>
 
-<!-- Area to input HTML code -->
-<h3>Paste HTML Code</h3>
-<textarea id="htmlInput" placeholder="Paste your HTML code here..."></textarea>
-<button id="loadHtml">Load HTML</button>
+<!-- Input URL to clone -->
+<h3>Enter the URL of the Site to Clone</h3>
+<input type="text" id="siteUrl" placeholder="Enter website URL (e.g. https://example.com)">
+<input type="text" id="newPageUrl" placeholder="Enter custom page URL (e.g. /mypage.html)">
+<button id="clonePage">Clone and Edit Page</button>
 
-<!-- Pixel tracking code input -->
-<h3>Add Tracking Pixel Code</h3>
-<textarea id="pixelCode" placeholder="Enter tracking pixel code..."></textarea>
-<button id="addPixel">Add Pixel</button>
-
-<!-- Display the HTML code to be edited -->
-<h3>Edit Links and Content</h3>
+<!-- HTML editor -->
+<h3>Edit the Cloned HTML</h3>
 <div id="editor" contenteditable="true"></div>
 
-<!-- Save the edited HTML -->
-<button id="saveHtml">Save HTML</button>
-<button id="previewHtml">Preview Page</button>
-
-<!-- Replace href links -->
-<h3>Replace All Links</h3>
-<input id="newHref" type="text" placeholder="Enter new link for all hrefs">
-<button id="replaceLinks">Replace Links</button>
-
-<!-- Area to manage multiple pages -->
-<h3>Manage Pages</h3>
-<input id="pageName" type="text" placeholder="Page Name">
-<button id="addPage">Add Page</button>
-<ul id="pageList"></ul>
+<!-- Save and Preview options -->
+<button id="savePage">Save Page</button>
+<button id="previewPage">Preview Page</button>
 
 <script>
-    let pages = {};
+    let clonedHtml = "";
 
-    // Load HTML into the editor
-    document.getElementById('loadHtml').addEventListener('click', function() {
-        const html = document.getElementById('htmlInput').value;
-        document.getElementById('editor').innerHTML = html;
-    });
+    // Function to fetch and clone a page
+    async function clonePage() {
+        const siteUrl = document.getElementById('siteUrl').value;
+        const newPageUrl = document.getElementById('newPageUrl').value;
 
-    // Add pixel code
-    document.getElementById('addPixel').addEventListener('click', function() {
-        const pixelCode = document.getElementById('pixelCode').value;
-        const editorContent = document.getElementById('editor').innerHTML;
-        document.getElementById('editor').innerHTML = editorContent + pixelCode;
-    });
+        if (!siteUrl || !newPageUrl) {
+            alert("Please enter both a site URL and a new page URL.");
+            return;
+        }
 
-    // Save edited HTML
-    document.getElementById('saveHtml').addEventListener('click', function() {
+        try {
+            // Fetch the HTML content from the provided URL
+            const response = await fetch(siteUrl);
+            if (!response.ok) {
+                throw new Error("Failed to fetch the page. Make sure the URL is correct.");
+            }
+
+            // Get the HTML content
+            const htmlContent = await response.text();
+            document.getElementById('editor').innerHTML = htmlContent; // Load HTML into the editor
+            clonedHtml = htmlContent; // Store the cloned HTML
+
+            alert(`Page cloned successfully! You can now edit the HTML.`);
+        } catch (error) {
+            console.error(error);
+            alert("Error: Unable to clone the page. " + error.message);
+        }
+    }
+
+    // Function to save the edited HTML
+    function savePage() {
         const editedHtml = document.getElementById('editor').innerHTML;
-        alert('HTML Saved: ' + editedHtml);
-    });
+        const newPageUrl = document.getElementById('newPageUrl').value;
 
-    // Preview edited HTML in a new window
-    document.getElementById('previewHtml').addEventListener('click', function() {
+        // Create a Blob with the edited HTML
+        const blob = new Blob([editedHtml], { type: 'text/html' });
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.download = newPageUrl.split('/').pop() || "page.html"; // Default to 'page.html' if no name
+        downloadLink.click();
+
+        alert(`Page saved as ${newPageUrl}`);
+    }
+
+    // Function to preview the edited HTML in a new tab
+    function previewPage() {
         const editedHtml = document.getElementById('editor').innerHTML;
         const newWindow = window.open();
         newWindow.document.write(editedHtml);
-    });
+    }
 
-    // Replace all href links
-    document.getElementById('replaceLinks').addEventListener('click', function() {
-        const newHref = document.getElementById('newHref').value;
-        const links = document.querySelectorAll('#editor a');
-        links.forEach(link => {
-            link.setAttribute('href', newHref);
-        });
-        alert('All href links replaced with: ' + newHref);
-    });
-
-    // Add and manage multiple pages
-    document.getElementById('addPage').addEventListener('click', function() {
-        const pageName = document.getElementById('pageName').value;
-        const pageContent = document.getElementById('editor').innerHTML;
-
-        // Save the page in a list
-        pages[pageName] = pageContent;
-
-        // Display the list of pages
-        const pageList = document.getElementById('pageList');
-        const li = document.createElement('li');
-        li.textContent = pageName;
-        li.addEventListener('click', function() {
-            document.getElementById('editor').innerHTML = pages[pageName];
-        });
-        pageList.appendChild(li);
-
-        alert('Page "' + pageName + '" saved successfully!');
-    });
+    // Event listeners for buttons
+    document.getElementById('clonePage').addEventListener('click', clonePage);
+    document.getElementById('savePage').addEventListener('click', savePage);
+    document.getElementById('previewPage').addEventListener('click', previewPage);
 </script>
 
 </body>
