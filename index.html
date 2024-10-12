@@ -34,7 +34,7 @@
 <script>
     let clonedHtml = "";
 
-    // Function to fetch and clone a page
+    // Function to fetch and clone a page using a proxy to bypass CORS issues
     async function clonePage() {
         const siteUrl = document.getElementById('siteUrl').value;
         const newPageUrl = document.getElementById('newPageUrl').value;
@@ -44,9 +44,12 @@
             return;
         }
 
+        const proxyUrl = "https://cors-anywhere.herokuapp.com/"; // Proxy to bypass CORS
+        const fullUrl = proxyUrl + siteUrl;
+
         try {
-            // Fetch the HTML content from the provided URL
-            const response = await fetch(siteUrl);
+            // Fetch the HTML content from the provided URL using the proxy
+            const response = await fetch(fullUrl);
             if (!response.ok) {
                 throw new Error("Failed to fetch the page. Make sure the URL is correct.");
             }
