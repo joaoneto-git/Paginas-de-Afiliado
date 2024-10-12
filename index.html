@@ -1,111 +1,112 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clone de Páginas de Vendas</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f4f4f4;
-    }
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      background: white;
-      border-radius: 5px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    label {
-      display: block;
-      margin-bottom: 8px;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #28a745;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #218838;
-    }
-    .result {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #e9ecef;
-      border-radius: 4px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Page Editor</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        textarea { width: 100%; height: 150px; margin-bottom: 10px; }
+        button { padding: 10px 15px; margin-right: 5px; cursor: pointer; }
+        #editor { width: 100%; height: 300px; border: 1px solid #ddd; padding: 10px; overflow-y: auto; margin-bottom: 20px; }
+        ul { list-style-type: none; padding: 0; }
+        ul li { margin: 5px 0; cursor: pointer; }
+        ul li:hover { text-decoration: underline; }
+        h3 { margin-top: 30px; }
+    </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Clonar Página de Vendas</h1>
-    <label for="urlInput">URL da Página de Vendas:</label>
-    <input type="text" id="urlInput" placeholder="Insira a URL da página de vendas">
+<h1>Online Page Editor</h1>
 
-    <label for="affiliateLinkInput">Link de Afiliado Substituto:</label>
-    <input type="text" id="affiliateLinkInput" placeholder="Insira o novo link de afiliado">
+<!-- Area to input HTML code -->
+<h3>Paste HTML Code</h3>
+<textarea id="htmlInput" placeholder="Paste your HTML code here..."></textarea>
+<button id="loadHtml">Load HTML</button>
 
-    <button onclick="clonePage()">Clonar e Substituir Links</button>
+<!-- Pixel tracking code input -->
+<h3>Add Tracking Pixel Code</h3>
+<textarea id="pixelCode" placeholder="Enter tracking pixel code..."></textarea>
+<button id="addPixel">Add Pixel</button>
 
-    <div class="result" id="result"></div>
-  </div>
+<!-- Display the HTML code to be edited -->
+<h3>Edit Links and Content</h3>
+<div id="editor" contenteditable="true"></div>
 
-  <script>
-    // Função para clonar e substituir links
-    function clonePage() {
-      const url = document.getElementById('urlInput').value;
-      const newAffiliateLink = document.getElementById('affiliateLinkInput').value;
+<!-- Save the edited HTML -->
+<button id="saveHtml">Save HTML</button>
+<button id="previewHtml">Preview Page</button>
 
-      if (!url || !newAffiliateLink) {
-        alert("Por favor, insira a URL e o novo link de afiliado.");
-        return;
-      }
+<!-- Replace href links -->
+<h3>Replace All Links</h3>
+<input id="newHref" type="text" placeholder="Enter new link for all hrefs">
+<button id="replaceLinks">Replace Links</button>
 
-      // Simulação de clonagem (sem acesso ao backend)
-      fetch(url)
-        .then(response => response.text())
-        .then(data => {
-          // Criar um elemento DOM temporário para manipular o conteúdo da página clonada
-          const tempDiv = document.createElement('div');
-          tempDiv.innerHTML = data;
+<!-- Area to manage multiple pages -->
+<h3>Manage Pages</h3>
+<input id="pageName" type="text" placeholder="Page Name">
+<button id="addPage">Add Page</button>
+<ul id="pageList"></ul>
 
-          // Substituir links de afiliados na página clonada
-          const links = tempDiv.querySelectorAll('a');
-          links.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href && href.includes('afiliado')) {
-              link.setAttribute('href', newAffiliateLink);
-            }
-          });
+<script>
+    let pages = {};
 
-          // Exibir o conteúdo modificado no resultado
-          document.getElementById('result').innerHTML = tempDiv.innerHTML;
-        })
-        .catch(error => {
-          console.error('Erro ao carregar a página:', error);
-          document.getElementById('result').textContent = 'Erro ao carregar a página. Verifique a URL ou tente novamente.';
+    // Load HTML into the editor
+    document.getElementById('loadHtml').addEventListener('click', function() {
+        const html = document.getElementById('htmlInput').value;
+        document.getElementById('editor').innerHTML = html;
+    });
+
+    // Add pixel code
+    document.getElementById('addPixel').addEventListener('click', function() {
+        const pixelCode = document.getElementById('pixelCode').value;
+        const editorContent = document.getElementById('editor').innerHTML;
+        document.getElementById('editor').innerHTML = editorContent + pixelCode;
+    });
+
+    // Save edited HTML
+    document.getElementById('saveHtml').addEventListener('click', function() {
+        const editedHtml = document.getElementById('editor').innerHTML;
+        alert('HTML Saved: ' + editedHtml);
+    });
+
+    // Preview edited HTML in a new window
+    document.getElementById('previewHtml').addEventListener('click', function() {
+        const editedHtml = document.getElementById('editor').innerHTML;
+        const newWindow = window.open();
+        newWindow.document.write(editedHtml);
+    });
+
+    // Replace all href links
+    document.getElementById('replaceLinks').addEventListener('click', function() {
+        const newHref = document.getElementById('newHref').value;
+        const links = document.querySelectorAll('#editor a');
+        links.forEach(link => {
+            link.setAttribute('href', newHref);
         });
-    }
-  </script>
+        alert('All href links replaced with: ' + newHref);
+    });
+
+    // Add and manage multiple pages
+    document.getElementById('addPage').addEventListener('click', function() {
+        const pageName = document.getElementById('pageName').value;
+        const pageContent = document.getElementById('editor').innerHTML;
+
+        // Save the page in a list
+        pages[pageName] = pageContent;
+
+        // Display the list of pages
+        const pageList = document.getElementById('pageList');
+        const li = document.createElement('li');
+        li.textContent = pageName;
+        li.addEventListener('click', function() {
+            document.getElementById('editor').innerHTML = pages[pageName];
+        });
+        pageList.appendChild(li);
+
+        alert('Page "' + pageName + '" saved successfully!');
+    });
+</script>
 
 </body>
 </html>
