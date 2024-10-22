@@ -1,0 +1,876 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+<meta name="robots" content="index, follow">
+<link rel="shortcut icon" href="data:" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.dorothyrmi.online/afrmi">
+<meta property="og:title" content="Renda Múltipla Inteligente">
+<meta property="og:description" content="Inteligências artificiais">
+<meta property="og:image" content="https://media.atomicatpages.com/u/Nydl4Wj0sOdatxnVqGxYABNiq1A3/l/zhRNtW8524132.png">
+<meta charset="utf-8">
+<link rel="preload" href="https://scripts.converteai.net/be8d3b3a-433f-47aa-a749-965aa4bfa9cf/players/660ec1e0257bab0008b0afa4/player.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+<link rel="preload" href="https://images.converteai.net/be8d3b3a-433f-47aa-a749-965aa4bfa9cf/players/660ec1e0257bab0008b0afa4/thumbnail.jpg" as="image">
+<link rel="preload" href="https://cdn.converteai.net/be8d3b3a-433f-47aa-a749-965aa4bfa9cf/65de1f803546580008098015/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://api.vturb.com.br">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<title>Renda Múltipla Inteligente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600;700;800&family=Lato:wght@300;400;500;600;700;800&family=Ubuntu:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
+<style>@media (max-width:640px){.atm-hidden-mobile{display:none}}@media (min-width:640px){.atm-hidden-desktop{display:none}}.col-span-1{grid-column: span 1 / span 1;}.col-span-2{grid-column: span 2 / span 2;}.items-center{align-items:center}.grid-cols-6{grid-template-columns: repeat(6, minmax(0, 1fr))}.grid-cols-5{	grid-template-columns: repeat(5, minmax(0, 1fr))}.grid-cols-4{grid-template-columns: repeat(4, minmax(0, 1fr))}.grid-cols-2{grid-template-columns: repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns: repeat(3, minmax(0, 1fr))}.grid-cols-1{grid-template-columns: repeat(1, minmax(0, 1fr))}.grid{display:grid}.basis-1\/2{flex-basis:50%}.flex{display:flex}.gap-1{gap:4px}.gap-2{gap:8px}.gap-4{gap:16px}.gap-6{gap:24px}.gap-12{48px}.gap-24{gap:96px}.justify-center{justify-content:center}.basis-full{flex-basis:100%}html{scroll-behavior:smooth;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}body,center,dd,del,div,dt,em,footer,h1,h2,h3,h4,h5,h6,i,iframe,img,p,q,s,small,span,strike,strong,sub,sup,table,tbody,td,tr,u{margin:-1px 0 0 0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:Lato,sans-serif}.u{-moz-user-select:none;-webkit-user-select:none;cursor:default}table{border-collapse:collapse;border-spacing:0}body{line-height:1}body{background-color:#ffffff;overflow-x:hidden}iframe,img,svg{max-width:100%}h1,h1 b,h1 span,h2,h2 b,h2 span,h3,h3 b,h3 span{font-family:Ubuntu,sans-serif}a{text-decoration:none;font-family:Lato,sans-serif}a.btn{font-family:Ubuntu,sans-serif}em span.lg,em span.md,em span.sm{font-style:italic}@media (max-width:600px){.flex-large,.flex-small{margin-right:0!important;margin-bottom:16px}}.flexrow{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center}.flex-large,.flex-small{flex-basis:100%}.flex-large:last-child,.flex-small:last-child{margin-right:0!important}@media (min-width:600px){.flex-small{flex:1;margin-bottom:0!important;padding-bottom:0!important}.flex-small.half{flex:0 0 calc(1 / 2 * 100%)}.flex-small.one-fifth{flex:0 0 calc(1 / 5 * 100%)}.flex-small.two-fifths{flex:0 0 calc(2 / 5 * 100%)}.flex-small.one-fourth{flex:0 0 calc(1 / 4 * 100%)}.flex-small.two-fourths{flex:0 0 calc(2 / 4 * 100%)}.flex-small.three-fourths{flex:0 0 calc(3 / 4 * 100%)}.flex-small.one-third{flex:0 0 calc(1 / 3 * 100%)}.flex-small.two-thirds{flex:0 0 calc(2 / 3 * 100%)}}@media (min-width:1000px){.flex-large{flex:1;margin-bottom:0}.flex-large.half{flex:0 0 calc(1 / 2 * 100%)}.flex-large.one-fifth{flex:0 0 calc(1 / 5 * 100%)}.flex-large.two-fifths{flex:0 0 calc(2 / 5 * 100%)}.flex-large.one-fourth,.flex-large.two-fourths{flex:0 0 calc(1 / 4 * 100%)}.flex-large.three-fourths{flex:0 0 calc(3 / 4 * 100%)}.flex-large.one-third{flex:0 0 calc(1 / 3 * 100%)}.flex-large.two-thirds{flex:0 0 calc(2 / 3 * 100%)}}@media (min-width:640px){.sm\:gap-1{gap:6px}.sm\:gap-2{gap:12px!important}.sm\:gap-4{gap:24px}.sm\:gap-6{gap:32px}.sm\:gap-12{gap:64px}.sm\:gap-24{gap:128px}.sm\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.sm\:grid-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}}</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body id="_Nydl4Wj0sOdatxnVqGxYABNiq1A3" data-page="_KfmoIwJeUScVwBVaexaX">
+<style>
+.jkKCQd0453819 {display: none}
+@media (max-width: 640px) {
+html {overflow-x:hidden}
+}
+</style>
+<style>.pulsing { animation-name: pulsing; animation-duration: 1s; animation-timing-function: ease-out; animation-iteration-count: infinite; } @keyframes pulsing { 0% { box-shadow: 0 0 0 0 #0bff00e1 } 80% { box-shadow: 0 0 0 12px #00ff1700 } }</style>
+<div class="division-AyMgbw9484653__wrapper">
+<style>
+#division-AyMgbw9484653 {
+border: none;
+border-radius: ;
+margin: 0;
+position: relative;
+padding: 0.01vh 20vw 0.01vh 20vw;
+background-color: #1700ff;
+}
+@media (max-width:1200px) {
+#division-AyMgbw9484653 {
+padding: 0.001vh 15vw 0.001vh 15vw;
+margin: 0;
+}
+}
+@media (max-width:600px) {
+#division-AyMgbw9484653 {
+margin: 0;
+padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+}
+}
+</style>
+<div id="division-AyMgbw9484653" class="mdvCWi0447458">
+<div class="description-PXsERX9514988">
+<style>
+.description-PXsERX9514988-element h3 {
+font-size: 1.32vw;
+text-align: center;
+padding-top: 1vh;
+padding-bottom: 1vh;
+color: #ffffff;
+line-height: 1.1;
+font-weight: 700;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.description-PXsERX9514988-element h3 {
+font-size: 1.80vw;
+padding-top: 0.75vh;
+padding-bottom: 0.75vh;
+}
+}
+@media (max-width: 640px) {
+.description-PXsERX9514988-element h3 {
+font-size: 4.00vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="description-PXsERX9514988-element ">
+<h3>
+O vídeo será retirado do ar hoje,&nbsp;<span class="sm">29/07/2024</span>
+</h3>
+</div>
+</div>
+</div>
+</div>
+<div class="division-1658581343653__wrapper">
+<style>
+#division-1658581343653 {
+border: none;
+border-radius: ;
+margin: 0;
+position: relative;
+padding: 3vh 20vw 3vh 20vw;
+background-color: #ffffff;
+}
+@media (max-width:1200px) {
+#division-1658581343653 {
+padding: 2.25vh 15vw 2.25vh 15vw;
+margin: 0;
+}
+}
+@media (max-width:600px) {
+#division-1658581343653 {
+margin: 0;
+padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+}
+}
+</style>
+<div id="division-1658581343653" class="imHyvf0447459">
+<style>
+.video-1658581462028Iuugbk {
+border: none;
+box-shadow: none;
+border-radius: ;
+}
+.video-1658581462028Iuugbk #smartplayer {
+border-radius: !important;
+}
+video.smartplayer-video {
+border-radius: 0px !important;
+}
+</style>
+<div class="video-1658581462028Iuugbk">
+<div id="vid_660ec1e0257bab0008b0afa4" style="position:relative;width:100%;padding: 56.25% 0 0;"> <img id="thumb_660ec1e0257bab0008b0afa4" src="https://images.converteai.net/be8d3b3a-433f-47aa-a749-965aa4bfa9cf/players/660ec1e0257bab0008b0afa4/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"> <div id="backdrop_660ec1e0257bab0008b0afa4" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div> </div>
+<script type="text/javascript" id="scr_660ec1e0257bab0008b0afa4"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/be8d3b3a-433f-47aa-a749-965aa4bfa9cf/players/660ec1e0257bab0008b0afa4/player.js", s.async=!0,document.head.appendChild(s);</script>
+</div>
+<div class="description-1658581519684A04PEd">
+<style>
+.description-1658581519684A04PEd-element h3 {
+font-size: 1.32vw;
+text-align: center;
+padding-top: 3vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.description-1658581519684A04PEd-element h3 {
+font-size: 1.80vw;
+padding-top: 2.25vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.description-1658581519684A04PEd-element h3 {
+font-size: 4.00vw;
+padding-top: 2.25vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="description-1658581519684A04PEd-element ">
+<h3>
+<span style="font-style:italic">Disponível para todas as idades</span>
+</h3>
+</div>
+</div>
+<div class="button-AAprBy5482479">
+<style>
+.pulsing_AAprBy5482479 {
+animation-name: pulsing_AAprBy5482479;
+animation-duration: 1s;
+animation-timing-function: ease-out;
+animation-iteration-count: infinite;
+}
+@keyframes pulsing_AAprBy5482479 {
+0% {
+box-shadow: 0 0 0 0 #0bff00e1
+}
+80% {
+box-shadow: 0 0 0 12px #0bff0000
+}
+}
+a.button-AAprBy5482479-element {
+background: #0bff00;
+border-radius: 4px;
+border: none;
+color: #000000;
+padding: 16px 32px 16px 32px;
+font-weight: 600;
+display: block;
+width: fit-content;
+text-align: center;
+margin: 3vh auto 2vh auto;
+font-size: 1.49vw;
+box-sizing: border-box;
+max-width: 100%;
+transition: all 0.5s ease-in-out;
+}
+a.button-AAprBy5482479-element:hover {
+filter: brightness(1.2);
+}
+@media (max-width: 1200px) {
+a.button-AAprBy5482479-element {
+font-size: 1.69vw;
+margin: 1.98vh auto 1.5vh auto;
+padding: 8px 16px 8px 16px;
+}
+}
+@media (max-width: 640px) {
+a.button-AAprBy5482479-element {
+font-size: 3.94vw;
+padding: 12px 24px 12px 24px;
+margin: 1.5vh auto 1vh auto;
+width: ;
+}
+}
+</style>
+<a href="https://pay.kiwify.com.br/uqxzRNx?afid=d78fpfe1" target="_blank" class="btn button-AAprBy5482479-element track-smartplayer-click-event-1 pulsing_AAprBy5482479">
+QUERO UM NEGÓCIO AUTOMATIZADO
+</a>
+</div>
+</div>
+</div>
+<div class="division-PJimXK4498321__wrapper">
+<style>
+#division-PJimXK4498321 {
+border: none;
+border-radius: ;
+margin: 0;
+position: relative;
+padding: 3vh 20vw 3vh 20vw;
+background-color: #ffffff;
+}
+@media (max-width:1200px) {
+#division-PJimXK4498321 {
+padding: 2.25vh 15vw 2.25vh 15vw;
+margin: 0;
+}
+}
+@media (max-width:600px) {
+#division-PJimXK4498321 {
+margin: 0;
+padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+}
+}
+</style>
+<div id="division-PJimXK4498321" class="wFauQd0447463 jkKCQd0453819">
+<div class="subheadline-FqqCsR4966643">
+<style>
+.subheadline-FqqCsR4966643-element h2 {
+font-size: 1.65vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.subheadline-FqqCsR4966643-element h2 {
+font-size: 2.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.subheadline-FqqCsR4966643-element h2 {
+font-size: 5.60vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="subheadline-FqqCsR4966643-element subheadline">
+<h2>
+<b>GARANTIA CONDICIONAL BLINDADA</b>
+</h2>
+</div>
+</div>
+<div class="subheadline-WdcsCP4641708">
+<style>
+.subheadline-WdcsCP4641708-element h2 {
+font-size: 1.65vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.subheadline-WdcsCP4641708-element h2 {
+font-size: 2.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.subheadline-WdcsCP4641708-element h2 {
+font-size: 4.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="subheadline-WdcsCP4641708-element subheadline">
+<h2>
+O dinheiro que você investir hoje ficará retido em um fundo 100% seguro durante TODO O PERÍODO da mentoria. <br>
+</h2>
+</div>
+</div>
+<div class="subheadline-aRwrKA4104310">
+<style>
+.subheadline-aRwrKA4104310-element h2 {
+font-size: 1.65vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.subheadline-aRwrKA4104310-element h2 {
+font-size: 2.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.subheadline-aRwrKA4104310-element h2 {
+font-size: 4.38vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="subheadline-aRwrKA4104310-element subheadline">
+<h2>
+Ou seja, você poderá ver e aplicar todo o conteúdo da mentoria e ver o resultado com os próprios olhos! <br><br> Se mesmo assim, você não tiver resultado, você poderá resgatar todo o valor de volta!
+</h2>
+</div>
+</div>
+<div class="image-BIkkNc4789448">
+<style>
+.image-BIkkNc4789448-element img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 0.25vh;
+margin-top: 0.25vh;
+max-width: 20%;
+border-radius: 0;
+border: none;
+}
+@media (max-width: 1200px) {
+.image-BIkkNc4789448-element img {
+max-width: 18%;
+}
+}
+@media (max-width: 600px) {
+.image-BIkkNc4789448-element img {
+max-width: 80%;
+margin-left:auto;margin-right:auto;
+}
+}
+</style>
+<div class="image-BIkkNc4789448-element">
+<img loading="lazy" src="https://media.atomicatpages.com/u/Nydl4Wj0sOdatxnVqGxYABNiq1A3/l/BoLeii4801327.png" alt="">
+</div>
+</div>
+</div>
+</div>
+<div class="division-JaKcyC4877002__wrapper">
+<style>
+#division-JaKcyC4877002 {
+border: none;
+border-radius: ;
+margin: 0;
+position: relative;
+padding: 3vh 20vw 3vh 20vw;
+background-color: #ffffff;
+}
+@media (max-width:1200px) {
+#division-JaKcyC4877002 {
+padding: 2.25vh 15vw 2.25vh 15vw;
+margin: 0;
+}
+}
+@media (max-width:600px) {
+#division-JaKcyC4877002 {
+margin: 0;
+padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+}
+}
+</style>
+<div id="division-JaKcyC4877002" class="jhpeCr0447467">
+<div class="subheadline-kcjwbq4904985">
+<style>
+.subheadline-kcjwbq4904985-element h2 {
+font-size: 1.65vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.subheadline-kcjwbq4904985-element h2 {
+font-size: 2.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.subheadline-kcjwbq4904985-element h2 {
+font-size: 4.38vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="subheadline-kcjwbq4904985-element subheadline">
+<h2>
+Depois disso, você já deve ter percebido que está diante de uma <br><span style="color:#1700ff"><b>OPORTUNIDADE PERFEITA</b></span>
+</h2>
+</div>
+</div>
+<div class="subheadline-aPFczd5162939">
+<style>
+.subheadline-aPFczd5162939-element h2 {
+font-size: 1.65vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.subheadline-aPFczd5162939-element h2 {
+font-size: 2.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.subheadline-aPFczd5162939-element h2 {
+font-size: 5.60vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="subheadline-aPFczd5162939-element subheadline">
+<h2>
+ENTÃO SE INSCREVA AGORA NA&nbsp;<b>MENTORIA RENDA MÚLTIPLA INTELIGENTE</b>…<br>
+</h2>
+</div>
+</div>
+<div class="subheadline-yvJubg5269403">
+<style>
+.subheadline-yvJubg5269403-element h2 {
+font-size: 1.65vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.subheadline-yvJubg5269403-element h2 {
+font-size: 2.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.subheadline-yvJubg5269403-element h2 {
+font-size: 4.00vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="subheadline-yvJubg5269403-element subheadline">
+<h2>
+DE&nbsp;<span style="color:#ff0000"><del>R$3.188,00</del></span><br>
+</h2>
+</div>
+</div>
+<div class="subheadline-FhqhWL4567703">
+<style>
+.subheadline-FhqhWL4567703-element h2 {
+font-size: 1.65vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.subheadline-FhqhWL4567703-element h2 {
+font-size: 2.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.subheadline-FhqhWL4567703-element h2 {
+font-size: 4.38vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="subheadline-FhqhWL4567703-element subheadline">
+<h2>
+Por apenas 12x de:<br>
+</h2>
+</div>
+</div>
+<div class="subheadline-eQHels5272419">
+<style>
+.subheadline-eQHels5272419-element h2 {
+font-size: 1.65vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.subheadline-eQHels5272419-element h2 {
+font-size: 2.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.subheadline-eQHels5272419-element h2 {
+font-size: 7.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="subheadline-eQHels5272419-element subheadline">
+<h2>
+&nbsp;<span style="color:#1700ff"><b>R$19,76</b></span><br>
+</h2>
+</div>
+</div>
+<div class="button-dlbbYE5495040 jkKCQd0453819">
+<style>
+.pulsing_dlbbYE5495040 {
+animation-name: pulsing_dlbbYE5495040;
+animation-duration: 1s;
+animation-timing-function: ease-out;
+animation-iteration-count: infinite;
+}
+@keyframes pulsing_dlbbYE5495040 {
+0% {
+box-shadow: 0 0 0 0 #0bff00e1
+}
+80% {
+box-shadow: 0 0 0 12px #0bff0000
+}
+}
+a.button-dlbbYE5495040-element {
+background: #0bff00;
+border-radius: 4px;
+border: none;
+color: #000000;
+padding: 16px 32px 16px 32px;
+font-weight: 600;
+display: block;
+width: fit-content;
+text-align: center;
+margin: 3vh auto 2vh auto;
+font-size: 1.49vw;
+box-sizing: border-box;
+max-width: 100%;
+transition: all 0.5s ease-in-out;
+}
+a.button-dlbbYE5495040-element:hover {
+filter: brightness(1.2);
+}
+@media (max-width: 1200px) {
+a.button-dlbbYE5495040-element {
+font-size: 1.69vw;
+margin: 1.98vh auto 1.5vh auto;
+padding: 8px 16px 8px 16px;
+}
+}
+@media (max-width: 640px) {
+a.button-dlbbYE5495040-element {
+font-size: 3.94vw;
+padding: 12px 24px 12px 24px;
+margin: 1.5vh auto 1vh auto;
+width: ;
+}
+}
+</style>
+<a href="https://pay.kiwify.com.br/uqxzRNx?afid=d78fpfe1" target="_blank" class="btn button-dlbbYE5495040-element track-final pulsing_dlbbYE5495040">
+QUERO UM NEGÓCIO AUTOMATIZADO
+</a>
+</div>
+<div class="container-WnFkMr4779903">
+<style>
+.justify-center {
+justify-content: center;
+}
+@media (max-width: 640px) {
+.m-justify-center {
+justify-content:center;
+}
+}
+.container-WnFkMr4779903-element {
+border: none;
+box-shadow: none;
+background-color: #ffffff;
+border-radius: ;
+padding: 16px 16px 16px 16px;
+text-align: ;
+margin: 0 auto 0 auto;
+box-sizing: border-box;
+max-width: 100%;
+}
+@media (max-width: 1200px) {
+.container-WnFkMr4779903-element {
+margin: 0 auto 0 auto;
+padding: 0.8vh 0.8vw 0.8vh 0.8vw;
+}
+}
+@media (max-width: 640px) {
+.container-WnFkMr4779903-element {
+margin: 0 auto 0 auto;
+padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+;
+}
+}
+</style>
+<div class="container-WnFkMr4779903-element">
+</div>
+</div>
+<div class="container-CLNQXg4782289">
+<style>
+.justify-center {
+justify-content: center;
+}
+@media (max-width: 640px) {
+.m-justify-center {
+justify-content:center;
+}
+}
+.container-CLNQXg4782289-element {
+border: none;
+box-shadow: none;
+background-color: #ffffff;
+border-radius: ;
+padding: 16px 16px 16px 16px;
+text-align: ;
+margin: 0 auto 0 auto;
+box-sizing: border-box;
+max-width: 100%;
+}
+@media (max-width: 1200px) {
+.container-CLNQXg4782289-element {
+margin: 0 auto 0 auto;
+padding: 0.8vh 0.8vw 0.8vh 0.8vw;
+}
+}
+@media (max-width: 640px) {
+.container-CLNQXg4782289-element {
+margin: 0 auto 0 auto;
+padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+;
+}
+}
+</style>
+<div class="container-CLNQXg4782289-element">
+</div>
+</div>
+<div class="subheadline-FgknvI5584425">
+<style>
+.subheadline-FgknvI5584425-element h2 {
+font-size: 1.65vw;
+text-align: center;
+padding-top: 2vh;
+padding-bottom: 2vh;
+color: #000000;
+line-height: 1.1;
+font-weight: 400;
+letter-spacing: px;
+false
+}
+@media (max-width: 1200px) {
+.subheadline-FgknvI5584425-element h2 {
+font-size: 2.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+}
+}
+@media (max-width: 640px) {
+.subheadline-FgknvI5584425-element h2 {
+font-size: 4.50vw;
+padding-top: 1.5vh;
+padding-bottom: 1.5vh;
+text-align: center;
+}
+}
+</style>
+<div class="subheadline-FgknvI5584425-element subheadline">
+<h2>
+<b>Dúvidas Frequentes</b>
+</h2>
+</div>
+</div>
+<div class="faq-qsgbPg4784600" style="align-self:start">
+<style>
+.question {
+font-size: 16px;
+}
+.question.qsgbPg4784600 {
+background-color: #1700ff;
+border-radius: 4px;
+color: #ffffff;
+cursor: pointer;
+display: flex;
+font-weight: 600;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 8px;
+padding: 15px 20px;
+}
+.question.qsgbPg4784600:hover {
+filter: brightness(1.25);
+}
+.question > img {
+transition-property: transform;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 150ms;
+}
+.question.open > img {
+transform: rotate(90deg);
+}
+.faq-qsgbPg4784600 .answer {
+color: #000000;
+max-height: 0;
+overflow: hidden;
+padding: 0 20px;
+transition: all 0.2s ease-in-out;
+font-size: 16px;
+}
+.answer.open {
+margin-bottom: 8px;
+margin-top: 8px;
+padding: 6px 20px 6px 20px;
+}
+@media (max-width: 640px) {
+.question, .answer {
+font-size: 13px;
+}
+}
+</style>
+<div>
+<div class="question qsgbPg4784600">
+<p>
+Como vou acessar as aulas?
+</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+</svg>
+</div>
+<div class="answer">
+<p>
+Você vai receber no seu e-mail o acesso a nossa área de membros. Por lá, você vai poder assistir as aulas quando quiser!
+</p>
+</div>
+<div class="question qsgbPg4784600">
+<p>
+Tenho apenas um celular simples. Conseguirei aplicar o método?
+</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+</svg>
+</div>
+<div class="answer">
+<p>
+Sim! Todas as ferramentas que usamos podem ser acessadas de qualquer celular com acesso a internet.&nbsp;
+</p>
+</div>
+<div class="question qsgbPg4784600">
+<p>
+As aulas serão ao vivo ou gravadas?
+</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+</svg>
+</div>
+<div class="answer">
+<p>
+Eu valorizo o seu tempo! Por isso, as aulas serão gravadas e editadas para que sejam o mais práticas e rápidas possível.&nbsp;
+</p>
+</div>
+<div class="question qsgbPg4784600">
+<p>
+Quanto tempo duram as aulas?
+</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+</svg>
+</div>
+<div class="answer">
+<p>
+As aulas tem no máximo 15 minutos, mas a maioria delas tem menos de 10 minutos, para que você possa assistir e aplicar no mesmo dia.
+</p>
+</div>
+<div class="question qsgbPg4784600">
+<p>
+Como funciona a Garantia?
+</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-chevron-right" viewBox="0 0 16 16">
+<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+</svg>
+</div>
+<div class="answer">
+<p>
+Você terá 1 mês inteiro para assistir e aplicar o método. Enquanto isso o seu dinheiro ficará totalmente seguro. Se mesmo assim, você não tiver resultado, basta solicitar o resgate e o valor será devolvido para sua conta (ou extornado no cartão).
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="/afrmi/js/jkKCQd0453819.js" charset="utf-8"></script>
+<script>document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll("a").forEach((e=>{e.getAttribute("href")?.includes("#")||(e.getAttribute("href")?.includes("?")?e.setAttribute("href",e.getAttribute("href")+window.location.search.replace("?","&")):e.getAttribute("href")?e.setAttribute("href",e.getAttribute("href")+window.location.search):"")}))}));</script>
+<script type="text/javascript" defer>document.body.appendChild(Object.assign(document.createElement("script"), {src: "https://cdn.atomicatpages.com/a.js?cache=" + Math.floor((Math.random() * 100000)),async: true}));</script>
+</body>
+</html>
